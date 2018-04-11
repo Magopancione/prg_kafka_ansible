@@ -1,0 +1,17 @@
+- src: https://github.com/Magopancione/ansible_java8.git
+  name: jdk8
+  scm: git
+  version: v0.9.8
+  path: ./ansible_dependencies
+
+- src: https://github.com/Magopancione/ansible_kafka.git
+  name: ansible-kafka
+  scm: git
+  version: v0.11.0.2
+  path: ./ansible_dependencies
+
+- src: https://github.com/Magopancione/ansible_zookeeper.git
+  name: zookeeper
+  version: v3.4.6
+  scm: git
+  path: ./ansible_dependencies

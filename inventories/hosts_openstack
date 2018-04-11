@@ -1,0 +1,29 @@
+[kafka]
+kafka-3 ansible_ssh_host=10.116.104.132
+kafka-2 ansible_ssh_host=10.116.104.128
+kafka-1 ansible_ssh_host=10.116.104.93
+
+[zookeeper]
+kafka-3 ansible_ssh_host=10.116.104.132
+kafka-2 ansible_ssh_host=10.116.104.128
+kafka-1 ansible_ssh_host=10.116.104.93
+
+
+[all:vars]
+ansible_user=ubuntu
+kafka_zookeeper_hosts=[ 'kafka-1','kafka-2','kafka-3'  ]
+kafka_hosts=[ 'kafka-1','kafka-2','kafka-3' ]
+zookeeper_hosts=kafka-1:2181,kafka-2:2181,kafka-3:2181
+
+
+[xenials]  # Ubuntu 16.04 hosts without python2
+kafka-3 ansible_ssh_host=10.116.104.132
+kafka-2 ansible_ssh_host=10.116.104.128
+kafka-1 ansible_ssh_host=10.116.104.93
+
+
+[xenials:vars] 
+ansible_user=ubuntu
+#ansible_python_interpreter=/usr/bin/python3
+http_proxy="http://10.221.0.22:8080"
+https_proxy="http://10.221.0.22:8080"

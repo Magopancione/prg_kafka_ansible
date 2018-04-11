@@ -1,0 +1,14 @@
+---
+
+- hosts: zookeeper
+  become: yes
+  roles:
+  - jdk8
+  - zookeeper
+
+
+- hosts: kafka
+  become: yes
+  roles:
+  - jdk8
+  - ansible-kafka
